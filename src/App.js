@@ -20,6 +20,7 @@ function App() {
         console.error("error", error);
       });
   };
+
   return (
     <div className="App">
       <button onClick={handleGglSignIn}>Ggl SignIn</button>
