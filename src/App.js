@@ -38,8 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleGglSignIn}>Ggl SignIn</button>
-      <button onClick={handleSignOut}>Sign Out</button>
+      {/* condition ? true : false */}
+      {user.email ? (
+        <button onClick={handleSignOut}>Sign Out</button>
+      ) : (
+        <button onClick={handleGglSignIn}>Ggl SignIn</button>
+      )}
+
       <h3>User Name: {user.displayName}</h3>
       <p>Email: {user.email}</p>
       <img src={user.photoURL} alt="" />
